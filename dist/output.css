@@ -564,6 +564,10 @@ video {
   display: grid;
 }
 
+.hidden{
+  display: none;
+}
+
 .h-\[650px\]{
   height: 650px;
 }
@@ -1058,6 +1062,10 @@ video {
     gap: 2rem;
   }
 
+  .tablet\:gap-7{
+    gap: 1.75rem;
+  }
+
   .tablet\:rounded-none{
     border-radius: 0px;
   }
@@ -1075,9 +1083,30 @@ video {
     padding-right: 2.5rem;
   }
 
+  .tablet\:pl-8{
+    padding-left: 2rem;
+  }
+
   .tablet\:text-5xl{
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .tablet\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .tablet\:text-\[40px\]{
+    font-size: 40px;
+  }
+
+  .tablet\:text-\[45px\]{
+    font-size: 45px;
+  }
+
+  .tablet\:text-\[\]{
+    color: ;
   }
 }
 
