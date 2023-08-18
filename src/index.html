@@ -1,11 +1,78 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="First challenge Front-End, i worked hard on this project for gave my better, enjoy it !!"
+    />
+    <meta
+      property="og:image"
+      content="https:///staging.clixs.com.br/absolutes-links/danger.jpg"
+    />
+    <title>Newsletter - Challenge</title>
+
+    <!-- tailwind css -->
     <link href="../dist/output.css" rel="stylesheet" />
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="../images/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+
   </head>
-  <body class="bg-primary">
-    <h1 class="text-6xl font-bold underline text-center">Hello world!</h1>
+  <body class="h-screen bg-mediumGrey flex justify-center items-center">
+    <section
+      aria-labelledby="updated"
+      class="bg-white rounded-[30px] grid grid-cols-[1.3fr_auto] items-center"
+    >
+      <div class="px-24 py-7 max-w-[76ch] flex flex-col gap-9">
+        <h1 id="updated" class="text-darkGrey text-7xl font-bold font-roboto">
+          Stay updated!
+        </h1>
+        <p class="text-darkGrey text-xl font-medium">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li class="flex gap-2.5">
+            <img src="../images/icon-list.svg" alt="icon list">
+            <p class="text-darkGrey text-xl font-medium">Product discovery and building what matters</p>
+          </li>
+          <li class="flex gap-2.5">
+            <img src="../images/icon-list.svg" alt="icon list">
+            <p class="text-darkGrey text-xl font-medium">Measuring to ensure updates are a success </p>
+          </li>
+          <li class="flex gap-2.5">
+            <img src="../images/icon-list.svg" alt="icon list">
+            <p class="text-darkGrey text-xl font-medium">And much more!</p>
+          </li>
+        </ul>
+        <form >
+          <label class="block">
+            <div class="flex w-full justify-between mb-2">
+              <p class="block text-sm font-black text-slate-700">Email address</p>
+              <p class="block invisible text-sm font-black text-primary">Valid email required</p>
+            </div>
+            <input type="email" class="text-gray-500 w-full px-6 py-4 border-[1px] border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="email@company.com" required/>
+          </label>
+        </form>
+        <button type="submit" class="w-full bg-darkGrey text-white font-bold tracking-wide rounded-xl text-center py-5 hover:duration-300 hover:bg-gradient-to-l hover:from-[#ff5379] hover:to-primary hover:shadow-[0px_5px_85px_-5px_rgba(255,94,88,1)]">
+          Subscribe to monthly newsletter
+        </button>
+      </div>
+      <div class="p-8">
+        <img class="rounded-[30px] block laptop:!hidden "
+          src="../images/desktop.jpg"
+          alt="image desktop"
+        />
+        <img class="rounded-[7%] hidden laptop:!block"
+          src="../images/desktop2.jpg"
+          alt="image desktop"
+        />
+      </div>
+    </section>
   </body>
 </html>

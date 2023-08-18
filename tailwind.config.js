@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-   content: ["./src/**/*.{html,js}"],
-   theme: {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
     container: {
       center: true,
       padding: {
@@ -9,7 +9,12 @@ module.exports = {
         "2xl": "2rem",
       },
     },
+
     extend: {
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+      },
+
       screens: {
         laptop: { max: "1440px" },
         mobile: { max: "375px" },
@@ -23,5 +28,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
-
+};
