@@ -5,19 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailSpan = document.getElementById("email-modal");
   const mainContent = document.getElementById("main-content");
 
-  const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const button = document.getElementById("buttonFormEmailSubmit");
 
-  // function changeStyleInput() {
-  //   const email = emailInput.value;
+  const emailInputClass = "email-input";
+
+  function changeStyleInput() {
+    const email = emailInput.value;
   
-  //   if (regex.test(email)) {
-  //     emailInput.style.border = "4px green solid"
-  //   } else {
-  //     emailInput.style.border = "4px red solid"
-  //   }
-  // }
+    if (regex.test(email)) {
+      emailInput.style.border = "1px green solid";
+    } else {
+      emailInput.style.border = "1px red solid";
+    }
+  } 
 
   function validateEmail() {
     const email = emailInput.value;
@@ -45,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return false;
     }
   }
-  // email.addEventListener("change", changeStyleInput);
+  emailInput.addEventListener("blur", changeStyleInput);
   button.addEventListener("click", validateEmail);
 });
 
