@@ -16,6 +16,9 @@
     <!-- tailwind css -->
     <link href="../dist/output.css" rel="stylesheet" />
 
+    <!-- js -->
+    <script src="../src/scripts.js" defer></script>
+
     <!-- favicon -->
     <link
       rel="icon"
@@ -37,32 +40,35 @@
         <div
           class="max-w-[49ch] flex flex-col justify-center gap-6 mobile:px-5 mobile:gap-5"
         >
-          <h1 id="updated" class="text-6xl font-bold tablet:text-[45px] mobile:text-4xl">
+          <h1
+            id="updated"
+            class="text-6xl font-bold tablet:text-[45px] mobile:text-4xl"
+          >
             Stay updated!
           </h1>
           <p class="font-medium mobile:text-sm">
             Join 60,000+ product managers receiving monthly updates&nbsp;on:
           </p>
           <ul class="mobile:max-w-[34ch]">
-            <li class="flex gap-2.5 mb-3">
+            <li class="flex gap-2.5 mb-3 mobile:items-start">
               <img src="../images/icon-list.svg" alt="icon list" />
               <p class="font-medium mobile:text-sm">
                 Product discovery and building what matters
               </p>
             </li>
-            <li class="flex gap-2.5 mb-3">
+            <li class="flex gap-2.5 mb-3 mobile:items-start">
               <img src="../images/icon-list.svg" alt="icon list" />
               <p class="font-medium mobile:text-sm">
                 Measuring to ensure updates are a success
               </p>
             </li>
-            <li class="flex gap-2.5 mb-3">
+            <li class="flex gap-2.5 mb-3 mobile:items-start">
               <img src="../images/icon-list.svg" alt="icon list" />
               <p class="font-medium mobile:text-sm">And much more!</p>
             </li>
           </ul>
-          <form>
-            <label class="block">
+          <form id="form">
+            <label for="email" class="block">
               <div class="flex w-full justify-between mb-2">
                 <p
                   class="block text-sm mobile:text-xs font-black text-slate-700"
@@ -70,25 +76,28 @@
                   Email address
                 </p>
                 <p
+                  id="required"
                   class="block invisible text-sm mobile:text-xs font-black text-primary"
                 >
                   Valid email required
                 </p>
               </div>
               <input
+                id="email"
                 type="email"
                 class="text-gray-500 w-full px-6 py-4 border-[1px] border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent mobile:py-2 mobile:placeholder:text-xs"
                 placeholder="email@company.com"
                 required
               />
             </label>
+            <button
+              id="buttonFormEmailSubmit"
+              type="submit"
+              class="w-full mt-5 bg-darkGrey text-white font-bold tracking-wide rounded-lg text-center py-5 duration-300 hover:bg-gradient-to-l hover:from-primary from-[20%] hover:to-[#ff5379] hover:shadow-[0px_10px_10px_-5px_rgba(255,94,88,1)] mobile:py-4 mobile:text-sm"
+            >
+              Subscribe to monthly newsletter
+            </button>
           </form>
-          <button
-            type="submit"
-            class="w-full bg-darkGrey text-white font-bold tracking-wide rounded-lg text-center py-5 duration-300 hover:bg-gradient-to-l hover:from-primary from-[20%] hover:to-[#ff5379] hover:shadow-[0px_10px_10px_-5px_rgba(255,94,88,1)] mobile:py-4 mobile:text-sm"
-          >
-            Subscribe to monthly newsletter
-          </button>
         </div>
         <div
           class="bg-[url('../images/desktop.svg')] w-[400px] h-[650px] bg-cover bg-no-repeat bg-center mobile:bg-[url('../images/mobile.svg')] mobile:w-[360px] mobile:h-[273px]"
@@ -98,22 +107,31 @@
   </body>
 
   <!-- modal -->
-  <section aria-labelledby="modal" class="hidden">
-    <div class="bg-white rounded-[40px] px-16 py-14 flex flex-col gap-9 justify-center max-w-[55ch] mobile:h-screen mobile:py-0 mobile:px-4 mobile:rounded-none mobile:justify-around">
+  <section id="modal" aria-labelledby="modal" class="hidden">
+    <div
+      class="bg-white rounded-[40px] px-16 py-14 flex flex-col gap-9 justify-center max-w-[55ch] mobile:h-screen mobile:py-0 mobile:px-4 mobile:rounded-none mobile:justify-around"
+    >
       <div class="flex flex-col gap-9">
-        <img src="../images/icon-success.svg" class="max-w-[60px]" alt="success" />
-        <h1 id="modal" class="text-6xl font-bold mobile:text-4xl">Thanks for subscribing!</h1>
+        <img
+          src="../images/icon-success.svg"
+          class="max-w-[60px]"
+          alt="success"
+        />
+        <h1 id="modal" class="text-6xl font-bold mobile:text-4xl">
+          Thanks for subscribing!
+        </h1>
         <p class="font-medium">
-          A confirmation email has been send to <span id="email-modal" class="font-black">philip.marques@uo.com.br</span>.
-          Please open it and click the button inside to confirm you&nbsp;subscription.
+          A confirmation email has been send to
+          <span id="email-modal" class="font-black"></span>. Please open it and
+          click the button inside to confirm you&nbsp;subscription.
         </p>
       </div>
       <button
-      type="reset"
-      class="w-full bg-darkGrey text-white font-bold tracking-wide rounded-lg text-center py-4 duration-300 hover:bg-gradient-to-l hover:from-primary from-[20%] hover:to-[#ff5379] hover:shadow-[0px_10px_10px_-5px_rgba(255,94,88,1)] mobile:py-4 mobile:text-sm"
-    >
-      Dismiss message
-    </button>
+        type="reset"
+        class="w-full bg-darkGrey text-white font-bold tracking-wide rounded-lg text-center py-4 duration-300 hover:bg-gradient-to-l hover:from-primary from-[20%] hover:to-[#ff5379] hover:shadow-[0px_10px_10px_-5px_rgba(255,94,88,1)] mobile:py-4 mobile:text-sm"
+      >
+        Dismiss message
+      </button>
     </div>
   </section>
 </html>
