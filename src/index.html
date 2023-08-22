@@ -31,6 +31,7 @@
     class="font-roboto text-darkGrey h-screen bg-mediumGrey flex justify-center items-center"
   >
     <section
+    id="main-content"
       aria-labelledby="updated"
       class="bg-white rounded-[30px] items-center mobile:rounded-none"
     >
@@ -57,7 +58,7 @@
               </p>
             </li>
             <li class="flex gap-2.5 mb-3 mobile:items-start">
-              <img src="../images/icon-list.svg" alt="icon list" />
+              <img src="../images/icon-list.svg" alt="icon list" />ate
               <p class="font-medium mobile:text-sm">
                 Measuring to ensure updates are a success
               </p>
@@ -67,7 +68,7 @@
               <p class="font-medium mobile:text-sm">And much more!</p>
             </li>
           </ul>
-          <form id="form">
+          <div id="form">
             <label for="email" class="block">
               <div class="flex w-full justify-between mb-2">
                 <p
@@ -92,12 +93,11 @@
             </label>
             <button
               id="buttonFormEmailSubmit"
-              type="submit"
               class="w-full mt-5 bg-darkGrey text-white font-bold tracking-wide rounded-lg text-center py-5 duration-300 hover:bg-gradient-to-l hover:from-primary from-[20%] hover:to-[#ff5379] hover:shadow-[0px_10px_10px_-5px_rgba(255,94,88,1)] mobile:py-4 mobile:text-sm"
             >
               Subscribe to monthly newsletter
             </button>
-          </form>
+          </div>
         </div>
         <div
           class="bg-[url('../images/desktop.svg')] w-[400px] h-[650px] bg-cover bg-no-repeat bg-center mobile:bg-[url('../images/mobile.svg')] mobile:w-[360px] mobile:h-[273px]"
@@ -126,8 +126,7 @@
           click the button inside to confirm you&nbsp;subscription.
         </p>
       </div>
-      <button
-        type="reset"
+      <button onclick="reloadPage()"
         class="w-full bg-darkGrey text-white font-bold tracking-wide rounded-lg text-center py-4 duration-300 hover:bg-gradient-to-l hover:from-primary from-[20%] hover:to-[#ff5379] hover:shadow-[0px_10px_10px_-5px_rgba(255,94,88,1)] mobile:py-4 mobile:text-sm"
       >
         Dismiss message
